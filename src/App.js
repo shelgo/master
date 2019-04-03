@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Select from 'react-select';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+const techCompanies = [
+  { label: "Apple", value: 1 },
+  { label: "Facebook", value: 2 },
+  { label: "Netflix", value: 3 },
+  { label: "Tesla", value: 4 },
+  { label: "Amazon", value: 5 },
+  { label: "Alphabet", value: 6 },
+];
+
+const App = () => (
+  <div className="container">
+    <div className="row">
+      <div className="col-md-4"></div>
+      <div className="col-md-4">
+        <Select options={ techCompanies } 
+          isMulti />
       </div>
-    );
-  }
-}
+      <div className="col-md-4"></div>
+    </div>
+  </div>
+);
 
-export default App;
+export default App
